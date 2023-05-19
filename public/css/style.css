@@ -1,17 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital@1&display=swap');
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
 
 body{
     margin: 0;
-    background-color: aqua;
+    background-color:#E5F9DB;
+    font-family: 'Muli', sans-serif;
 }
 
 
 /* admin nav bar */
 
 .nav-list{
-    background-color: darkblue;
+    background-color: #0A4D68;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +35,57 @@ body{
     flex-basis: 50%;
 }
 
+
+
+/* topic section */
+
+
+.add-topic{
+    margin-top: 4rem;
+}
+
+.input-div {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    margin:0 auto 1.3rem auto;
+}
+
+.add-topic .btn {
+    display: block;
+    margin: auto;
+    background-color: rgb(5, 37, 126);
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.input-div input{
+    padding: .6rem ;
+    border-color: blue;
+    border-radius: 8px;
+}
+
+.input-div input:focus{
+    
+    border: 3px solid blueviolet ;
+}
+
+.input-div label{
+    font-size: 1.3rem;
+    margin-bottom: .6rem;
+}
+
+.add-topic .btn:hover {
+    background-color: rgb(87, 7, 161);
+    transform: scale(1.2);
+}
+
+/* media tag */
 
 @media(max-width: 1366px ){
 
