@@ -1,0 +1,17 @@
+<%- include("../include/head.ejs")  %>
+</head>
+<body>
+    <%- include("../include/admin-navbar.ejs") %>
+    <div class="container">
+        <% if (topic.length > 0 ){ %>
+        <ul>
+            <% topic.forEach(t=>{ %>
+                <li> <%= t.topic  %> </li>
+           <%  }) %>
+            <li></li>
+        </ul>
+        <% } else { %>
+            <h3>No Topic Found</h3>
+            <% } %>
+    </div>
+</body>
