@@ -6,3 +6,52 @@ body{
     margin: 0;
     background-color: aqua;
 }
+
+
+/* admin nav bar */
+
+.nav-list{
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 1.3rem 1rem;
+}
+
+.nav-list .nav-item a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.nav-item:first-child{
+    flex-basis: 50%;
+}
+
+
+@media(max-width: 1366px ){
+
+    .nav-item:first-child{
+    flex-basis: 100%;
+    text-align: center;
+}
+
+}
+
+
+@media(max-width: 566px ){
+
+    .nav-list {
+        gap: 1rem;
+        padding: 1rem .5rem;
+    }
+
+.nav-list .nav-item a{
+    font-size: 1.1rem;
+}
+
+}
