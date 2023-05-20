@@ -1,17 +1,28 @@
 <%- include("../include/head.ejs")  %>
 </head>
+
 <body>
-    <%- include("../include/admin-navbar.ejs") %>
-    <div class="container">
-        <% if (topic.length > 0 ){ %>
-        <ul>
-            <% topic.forEach(t=>{ %>
-                <li> <%= t.topic  %> </li>
-           <%  }) %>
-            <li></li>
-        </ul>
-        <% } else { %>
-            <h3>No Topic Found</h3>
-            <% } %>
+  <%- include("../include/admin-navbar.ejs") %>
+  <div class="topic-container">
+    <% if(topic.length > 0 ) { %>
+    <% topic.forEach(t=>{ %>
+
+    <div class="topic">
+      <p class="topic-name"><%= t.topic  %></p>
+      <form action="" method="post">
+        <input type="hidden" name="topicId" value="<%= t._id  %>">
+        <button class="btn-edit">Edit</button>
+      </form>
+      <form action="" method="post">
+        <input type="hidden" name="topicId" value="<%= t._id %>">
+        <button class="btn-delete">Delete</button>
+      </form>
     </div>
+    <% }) %>
+    <% } else { %>
+    <div class="no-topic">
+      <p>No Topic Found</p>
+    </div>
+    <% } %>
+  </div>
 </body>
