@@ -55,3 +55,14 @@ exports.editTopic = (req, res, next) => {
       console.log(err);
     });
 };
+
+exports.topicDelete = (req, res, next) => {
+  const topicId = req.body.topicId;
+  Topic.deleteById(topicId)
+    .then((result) => {
+      res.redirect("/admin/show-topic");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};

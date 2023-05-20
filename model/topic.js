@@ -51,6 +51,19 @@ class Topic {
         console.log(err);
       });
   }
+
+  static deleteById(topicId) {
+    const db = getDb();
+    return db
+      .collection("topic")
+      .deleteOne({ _id: new mongodb.ObjectId(topicId) })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 }
 
 module.exports = Topic;

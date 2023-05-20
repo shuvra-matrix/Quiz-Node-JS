@@ -15,7 +15,7 @@
         <input type="hidden" name="topicId" value="<%= t._id  %>">
         <button class="btn-edit">Edit</button>
       </form>
-      <form action="" method="post">
+      <form action="/admin/delete-topic" method="post">
         <input type="hidden" name="topicId" value="<%= t._id %>">
         <button class="btn-delete">Delete</button>
       </form>
@@ -28,3 +28,4 @@
     <% } %>
   </div>
 </body>
+</html>
