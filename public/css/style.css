@@ -6,7 +6,7 @@
 
 body{
     margin: 0;
-    background-color:#E5F9DB;
+    background-color:#917FB3;
     font-family: 'Muli', sans-serif;
 }
 
@@ -14,7 +14,7 @@ body{
 /* admin nav bar */
 
 .nav-list{
-    background-color: #0A4D68;
+    background-color: #2A2F4F;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,8 +87,70 @@ body{
 
 /* show topic section */
 
+.topic-container{
+    width: 90%;
+    margin: 4rem auto 2rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-around;
+    align-items:center;
+    gap: 2rem;
+}
 
+.topic{
+    padding: 1rem;
+    width: 250px;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #E5BEEC;
+    box-shadow: 1px 2px 10px black;
+}
+.topic-name-div{
+    margin-bottom: 1rem;
+    word-break: break-all;
+}
+.topic-name{
+    font-size: 30px;
+}
 
+.btn-edit{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    padding: .6rem;
+    background-color: #03C988;
+    color: white;
+    font-size: 1.1rem;
+    border-bottom-left-radius: 12px;
+    cursor: pointer;
+    border: #03C988;
+
+}
+
+.btn-edit:hover{
+    background-color: #038056;
+}
+
+ .btn-delete {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    padding: .6rem;
+    background-color: #FC2947;
+    color: white;
+     font-size: 1.1rem;
+     border-bottom-right-radius: 12px;
+     cursor: pointer;
+     border: #FC2947;
+ }
+
+ .btn-delete:hover{
+    background-color: #cf4156;
+ }
 
 /* media tag */
 

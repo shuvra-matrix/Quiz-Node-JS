@@ -1,0 +1,21 @@
+<%- include("../include/head.ejs") %>
+</head>
+<body>
+    <%- include("../include/admin-navbar.ejs") %>
+    <% if(topic.length > 0 ) { %>
+     <form action="/admin/edit-topic" method="post">
+        <% topic.forEach(t=>{ %>
+        <div class="add-topic">
+               <div class="input-div">
+                    <label for="topic">Add Topic</label>
+                    <input type="text" name="topic" id="topic" value="<%= t.topic  %>">
+                    <input type="hidden" name="topicId" value="<%= t._id  %>">
+               </div>
+               <button class="btn">Submit</button>
+        </div>
+         <% }) %>
+    </form>
+    <% } else { %>
+        <h1>Error</h1>
+        <% } %>
+</body>

@@ -8,8 +8,10 @@
     <% topic.forEach(t=>{ %>
 
     <div class="topic">
-      <p class="topic-name"><%= t.topic  %></p>
-      <form action="" method="post">
+        <div class="topic-name-div">
+            <p class="topic-name"><%= t.topic  %></p>
+        </div>
+      <form action="/admin/show-edit-topic" method="post">
         <input type="hidden" name="topicId" value="<%= t._id  %>">
         <button class="btn-edit">Edit</button>
       </form>
