@@ -8,5 +8,5 @@ router.get("/add-topic", adminController.getAddTopic);
 router.post("/add-topic", adminController.postAddTopic);
 router.get("/show-topic", adminController.showAllTopic);
 router.post("/show-edit-topic", adminController.showEditTopic);
-
+router.post("/edit-topic", adminController.editTopic);
 module.exports = router;

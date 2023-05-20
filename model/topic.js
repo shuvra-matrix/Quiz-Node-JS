@@ -1,12 +1,27 @@
 const getDb = require("../util/database").getDb;
 const mongodb = require("mongodb");
 class Topic {
-  constructor(topic) {
+  constructor(topic, id) {
     this.topic = topic;
+    this._id = id ? new mongodb.ObjectId(id) : null;
   }
   save() {
     const db = getDb();
-    return db.collection("topic").insertOne(this);
+    let newDb;
+    if (this._id) {
+      newDb = db
+        .collection("topic")
+        .updateOne({ _id: this._id }, { $set: { topic: this.topic } });
+    } else {
+      newDb = db.collection("topic").insertOne(this);
+    }
+    return newDb
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   static findAll() {
