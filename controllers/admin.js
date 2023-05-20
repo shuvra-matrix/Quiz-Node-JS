@@ -30,3 +30,15 @@ exports.showAllTopic = (req, res, next) => {
       console.log(err);
     });
 };
+
+exports.showEditTopic = (req, res, next) => {
+  const topicId = req.body.topicId;
+  Topic.findById(topicId)
+    .then((topic) => {
+      console.log(typeof topic);
+      res.render("admin/edit-topic", { topic: topic });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
